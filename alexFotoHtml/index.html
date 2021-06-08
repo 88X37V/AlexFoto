@@ -1,13 +1,42 @@
 <html lang="eng">
 <head>
     <meta charset="UTF-8">
-    <meta name="veiwport" content="width=device-width, initial-scale="1.0>
+    <meta name="veiwport" content="width=device-width, initial-scale="1.0">
     <title>test.css</title>
     <link rel="stylesheet" href="Css/style.css">
 </head>
-<body>
+<div id="outer-container">
+    <body>
 
-    <div id="outer-container">
-    </div>
+
+        <!-- Navigationbar -->
+        
+        <nav id="nav">
+            <div>
+            <img src="img/logga3.apng.png" width="100px" height="100px" id="logga">
+            </div>
+            <div id="nav-text">
+                <ul>
+                    <li><a href="index.html" class="active">Hem</a></li>
+                    <li><a href="portfolio.html">Om mig</a></li>
+                    <!-- Here starts the dropout one -->
+                    <li class="dropdown">
+                        <a href="#">Portfolio</a>
+                        <ul class="dropdown-content">
+                            <li><a href="index.html" class="active">Album 1</a></li>
+                            <li><a href="portfolio.html">Album 2</a></li>
+                            <li><a href="about.html">Album 3</a></li>
+                            <li><a href="contact.html">Album</a></li>
+                        </ul>
+                        <li><a href="about.html">Kontakt</a></li>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+</div>
 </body>
 </html>
+
+
