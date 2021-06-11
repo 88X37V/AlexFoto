@@ -1,17 +1,190 @@
 *{
     box-sizing: border-box;
 }
+.group {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+body {
+    background-color: rgb(255, 255, 255);
+}
 
 #outer-container {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 1400px;
     background-color: rgb(255, 255, 255);
-    margin-top: 50px;
-    border: 1px black solid;
     width: 960px;
-    height: 900px;
+    min-height: 900px;
+}
+
+.content {
+    min-height: 500px;
+}
+
+/* ------------------------ Navigation ------------------------- */
+
+#nav {
+    display:flex;
+    justify-content: space-around;
+    background-color: rgba(241, 239, 239, 0.89);
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+#nav-text > ul > li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#nav-text > ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    text-align:center;
+    color:rgb(0, 0, 0);
+    font-family: Jazz LET, fantasy, Trattatello, fantasy, sans-serif;
+    letter-spacing: 2px;
+}
+
+#nav-text ul li a:hover {
+    color:rgb(255, 254, 254);
+}
+
+#nav-text > ul li a:active {
+    color:rgb(169, 169, 169);
+}
+
+/* ----- DropNav ------ */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px 7px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ------------------------ Footer ------------------------- */
+
+.footer {
+    background-color: rgba(241, 239, 239, 0.89);
+    padding: 0 30px;
+}
+
+.container {
+    align-items: center;
+}
+
+h3 {
+    font-weight:normal;
+    color:rgb(0, 0, 0);
+    font-family: Jazz LET, fantasy, Trattatello, fantasy, sans-serif;
+    line-height:1.5em;
 
 }
 
+.footer-text > ul > li > a {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-family: Jazz LET, fantasy, Trattatello, fantasy, sans-serif;
+    letter-spacing: 2px;
+    line-height:1.5em;
+    transition: all .25s;
+    display: block;
+}
+
+.footer-text > ul > li > a:hover {
+    padding-left: 10px;
+    color:rgb(69, 69, 69);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foot-col {
+    width: 33%;
+}
+
+.social-links > ul > li {
+    padding: 8px;
+    float: left;
+} 
+
+.social-links > ul > li > a:hover {
+    opacity: 0.5;
+}
+
+/* ------------------------ Pictures ------------------------- */
+
+
+.soc-med-bild {
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+/* ------------------------ Responsiv/Mobil (iphone X) ------------------------- */
+
+@media(max-width: 376px){
+
+    #outer-container {
+        background-color: rgb(255, 255, 255);
+        width: 370px;
+        min-height: 900px;
+    }
+
+    #nav {
+        justify-content:space-evenly;
+    }
+
+    .foot-col {
+        width: 70%;
+    }
+
+    #nav-text > ul > li {
+    display: block;
+    margin-left: 1px;
+    margin-top: 10px;
+    }
+
+    .dropdown-content {
+        max-width: 80px;
+        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+        padding: 1px 2px;
+    }
+}
+
+
+/* Kan man ta bort dropdownen,
+ på mobilsidan? */
+
+
+/* ------------------------ ClearFix ------------------------- */
+
+    .clearfix:before,
+    .clearfix:after {
+      content: "";
+      display: table;
+    } 
+    .clearfix:after {
+      clear: both;
+    }
+    .clearfix {
+      zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    }
