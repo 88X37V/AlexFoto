@@ -3,14 +3,13 @@
     <meta charset="UTF-8">
     <meta name="veiwport" content="width=device-width, initial-scale="1.0">
     <title>test.css</title>
+    <link rel="stylesheet" href="Css/reset.css">
     <link rel="stylesheet" href="Css/style.css">
 </head>
 <div id="outer-container">
     <body>
 
-
         <!-- Navigationbar -->
-        
         <nav id="nav">
             <div>
             <img src="img/logga3.apng.png" width="100px" height="100px" id="logga" alt="Företags-logga">
@@ -33,12 +32,26 @@
                 </ul>
             </div>
         </nav>
-
-        <div class="content">
-            <img class="karusell-bild" src="img/Bild1-bildspel.jpg" width="960px" height="400px">
-    
+        
+        <!-- Carousel -->
+        <div class="carousel">
+            <button class="carousel_button" id="previous"><</button>
+            <button class="carousel_button" id="next">></button>   
+            <div class="carousel_images">
+                <img src="img/bild4-bildspel.jpg" id="lastClone" alt="picture">
+                <img src="img/Bild1-bildspel.jpg" alt="picture">
+                <img src="img/bild5-bildspel.png" alt="picture">
+                <img src="img/bild2-bildspel.png" alt="picture">
+                <img src="img/bild3-bildspel-2.jpg" alt="picture">
+                <img src="img/bild4-bildspel.jpg" alt="picture">
+                <img src="img/Bild1-bildspel.jpg" id="firstClone" alt="picture">
+            </div>
         </div>
         
+        <div class="content">
+            <h2>"blahabaha sloooogan something"</h2>
+        </div>
+    
         <footer class="footer">
             <div class="container">
                <div class="row">
@@ -59,7 +72,7 @@
                     </div>
                 
                     <div class="foot-col">
-                       <div class="social-links">
+                       <div class="social-links" id="clearfix">
                     <ul>
                        <li><a href="#">
                        <img src="img/fb_icon_325x325.png" width="27px" height="27px" class="soc-med-bild" alt="facebook-logga">
@@ -85,7 +98,7 @@
          så att en kan överskriva vid behov) -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="Js/main.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
 
