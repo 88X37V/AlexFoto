@@ -3,6 +3,10 @@
     <meta charset="UTF-8">
     <meta name="veiwport" content="width=device-width, initial-scale="1.0">
     <title>test.css</title>
+
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+
     <link rel="stylesheet" href="Css/reset.css">
     <link rel="stylesheet" href="Css/style.css">
 </head>
@@ -24,10 +28,10 @@
                         <ul class="dropdown-content">
                             <li><a href="Portrait.html">Porträtt</a></li>
                             <li><a href="#">Student</a></li>
-                            <li><a href="#">Resor</a></li>
-                            <li><a href="contact.html">Musik</a></li>
+                            <li><a href="Travel.html">Resor</a></li>
+                            <li><a href="#">Musik</a></li>
                         </ul>
-                        <li><a href="about.html">Kontakt</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
                     </li>
                 </ul>
             </div>
@@ -50,7 +54,7 @@
 
     <!-- content + album -->
         <div class="content">
-            <h2>"blahabaha sloooogan something"</h2>
+            <h2 class="h2_centrerad">"blahabaha sloooogan something"</h2>
             <br>
             <p>Blablablabla blahhh bhlabjlhabn.</p>
         </div>
@@ -60,16 +64,16 @@
             <h1 class="album_text">Porträtt</h1></a>
         </div>
         <div class="img_box">
-            <a href="#"><img class="album_img" src="img/Student.jpg" width="470px" height="270px" alt=""></a>
-            <h1 class="album_text">Student</h1>
+            <a href="#"><img class="album_img" src="img/Student.jpg" width="470px" height="270px" alt="">
+            <h1 class="album_text">Student</h1></a>
         </div>
             <div class="img_box">
-            <a href="#"><img class="album_img" src="img/travel2.JPG" width="470px" height="270px" alt=""></a>
-            <h1 class="album_text">Resor</h1>
+            <a href="Travel.html"><img class="album_img" src="img/travel2.JPG" width="470px" height="270px" alt="">
+            <h1 class="album_text">Resor</h1></a>
         </div>
             <div class="img_box">
-            <a href="#"><img class="album_img" src="img/musik.jpg" width="470px" height="270px" alt=""></a>
-            <h1 class="album_text">Musik</h1>
+            <a href="#"><img class="album_img" src="img/musik.jpg" width="470px" height="270px" alt="">
+            <h1 class="album_text">Musik</h1></a>
         </div>
     </div>
 
@@ -96,15 +100,15 @@
                     <div class="foot-col">
                        <div class="social-links" id="clearfix">
                     <ul>
-                       <li><a href="#">
+                       <li><a href="https://www.facebook.com/">
                        <img src="img/fb_icon_325x325.png" width="27px" height="27px" class="soc-med-bild" alt="facebook-logga">
                        </a></li>
 
-                       <li><a href="#">
+                       <li><a href="https://www.twitter.com">
                        <img src="img/twitter-logga.jpg" width="27px" height="27px" class="soc-med-bild" alt="twitter-logga">
                        </a></li>
 
-                       <li><a href="#">
+                       <li><a href="https://www.instagram.com/lejooon/">
                        <img src="img/Instagram-logga-2.png" width="27px" height="27px" class="soc-med-bild" alt="instagram-logga">
                        </a></li>
                     </ul>
@@ -116,10 +120,12 @@
     </div>
 
 
-    <!-- jQUERY (alltid egen kod efter,
-         så att en kan överskriva vid behov) -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+   <!-- jQUERY (alltid egen kod efter,
+         så att en kan överskriva vid behov) --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
