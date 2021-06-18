@@ -1,40 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&disp');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: poppins;
+}
+:root {
+    --primaryPurple: rgb(88, 45, 134);
+    --primaryBlack: black;
+    --navColor:  rgba(241, 239, 239, 0.89);
+    --boxShadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .group {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
-
 body {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-
 #outer-container {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     width: 960px;
     min-height: 1200px;
 }
-
 .content {
     margin-top: 20px;
-    min-height: 50px;
+    min-height: 35px;
 }
 
 /* länkar osv */
 h2 {
     text-align: center;
-    color:rgb(88, 45, 134);
+    color: var(--primaryPurple);
     font-family: fantasy, sans-serif;
     letter-spacing: 1px;
     font-weight: bolder;
     margin-top: 10px;
 }
+.h2_big {
+    font-size: 25px;
+} 
 
 /* Alexfoto text i footer */
 h3 {
@@ -42,16 +51,16 @@ h3 {
     letter-spacing: 1px;
     margin-top: 10px;
     font-weight: normal;
-    color:rgb(0, 0, 0);
-    font-family: fantasy, sans-serif;
+    color: var(--primaryBlack);
+    font-family: fantasy;
 }
 
 /* Rubrik i om_mig */
 h4 {
-    margin-left: 20%;
-    color:rgb(88, 45, 134);
-    font-family: Arial;
-    font-weight: bolder;
+    margin-left: 8%;
+    color: var(--primaryBlack);
+    font-family: poppins;
+    font-weight: 500;
     letter-spacing: 1px;
     margin-top: 10px;
     font-weight: normal;
@@ -59,35 +68,30 @@ h4 {
 
 /* text om_mig */
 p {
- font-family: Arial;
+ font-family: poppins;
  font-size: 14px;
- color:rgb(0, 0, 0);
+ color: var(--primaryBlack);
 }
-
 a {
     text-decoration: none;
 }
+
 
 /* ------------------------ Navigation ------------------------- */
 
 #nav {
     display:flex;
     justify-content: space-around;
-    background-color: rgba(241, 239, 239, 0.89);
+    background-color: var(--navColor);
 }
-
-
 ul {
     list-style-type: none;
 }
-
-
 #nav-text > ul > li {
     display: inline-block;
     margin-left: 10px;
     margin-top: 10px;
 }
-
 #nav-text > ul li a {
     display: block;
     padding: 5px;
@@ -98,13 +102,14 @@ ul {
     font-weight: bolder;
     font-size: 18px;;
 }
-
 #nav-text ul li a:hover {
-    color:rgb(255, 255, 255);
+    color:white;
+    font-weight: bolder;
 }
-
-#nav-text > ul li a:active {
-    color:rgb(169, 169, 169);
+#nav-text ul li a:active {
+    color:rgb(1, 209, 241);
+    font-weight: bolder;
+    transform: scale(1.1);
 }
 
 /* ----- DropNav ------ */
@@ -112,17 +117,15 @@ ul {
 .dropdown {
     position: relative;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: var(--boxShadow);
     padding: 5px 7px;
     z-index: 1;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -134,8 +137,7 @@ ul {
     overflow: hidden;
     width: 960px;
     position: relative;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    
+    box-shadow: var(--boxShadow);  
 }
 
 .carousel_images {
@@ -180,11 +182,12 @@ ul {
    background-color: white;
    color: black;
    opacity: none;
-
 }
 
 #next:hover {
-    opacity: 0.5;
+   background-color: white;
+   color: black;
+   opacity: none;
 }
 
 /* ------------------------ Album ------------------------- */
@@ -200,7 +203,6 @@ ul {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 470px));
-
 }
 
 .img_box {
@@ -222,6 +224,7 @@ ul {
 .img_box:hover .album_text {
     opacity: 1;
     transform: translateY(0);
+    cursor: pointer;
 }
 
 .img_box:before {
@@ -245,7 +248,6 @@ ul {
     object-fit: cover;
     object-position: center;
     position: absolute;
-    
 }
 
 .album_box .album_text {
@@ -269,7 +271,7 @@ ul {
 /* ------------------------ Footer ------------------------- */
 
 .footer {
-    background-color: rgba(241, 239, 239, 0.89);
+    background-color: var(--navColor);
     padding: 10px 30px;
 }
 
@@ -281,7 +283,7 @@ ul {
     display: block;
     text-decoration: none;
     color:rgb(0, 0, 0);
-    font-family: Jazz LET, fantasy, Trattatello, fantasy, sans-serif;
+    font-family: fantasy, sans-serif;
     letter-spacing: 2px;
     line-height: 1.5em;
     transition: all .25s;
@@ -339,12 +341,35 @@ ul {
     object-fit: cover;
     object-position: center;
     box-shadow: 0px 8px 16px 0px rgba(2, 2, 2, 0.2);
+    cursor: zoom-in;
 }
 
 .gallery_img:hover {
-    box-shadow: 0 0 3px 2px rgba(13, 58, 73, 0.76);
+    box-shadow: 0 0 4px 3px rgba(13, 58, 73, 0.76);
     transition: all .25s;
 }
+
+/* #lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox > .gallery_img {
+    max-width: 90%;
+    max-height: 90%;
+    border: solid 2px black;
+} */
 
 /* ------------------------ About me ------------------------- */
 
@@ -363,6 +388,85 @@ ul {
       margin: 20px 50px;
   }
 
+/* ------------------------ contact ------------------------- */
+
+.form_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( #a781b7b7, #fdfeffbe);
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.form_container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding-left: 15%;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(2, 2, 2, 0.2);
+}
+.form_container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    margin-top: 15px;
+}
+.form_container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 180px;
+    background: linear-gradient(135deg, #8c59a1b7, #7dc3f2be);
+}
+.form_container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .user_details .input_box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+.user_details > .input_box > .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user_details > .input_box > input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user_details > .input_box > input:focus,
+.user_details > .input_box > input:valid {
+    border-color:rgb(88, 45, 134);
+}
+
+.button {
+    height: 45px;
+    margin: 45px 0;
+}
+form > .button > input {
+    width: 50%;
+    outline: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient( #e1b6f2b7, #bb7df2be);
+    height:100%;
+    }
 
 /* ------------------------ Responsiv/Mobil (iphone X) ------------------------- */
 
@@ -372,30 +476,36 @@ ul {
         width: 370px;
         min-height: 900px;
     }
-
     #nav {
         justify-content:space-evenly;
     }
-
     .foot-col {
         width: 70%;
     }
-
     #nav-text > ul > li {
-    display: block;
-    margin-left: 1px;
-    margin-top: 10px;
+        display: block;
+        margin-left: 1px;
+        margin-top: 10px;
     }
-
     .dropdown-content {
         display: none;
     }
-
+    .carousel {
+        display:none;
+    }
     .album_img {
        width: 365px;
        height: 190px;
     }
-
+    .gallery_box {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 15px;
+        row-gap: 15px;
+    }
 }
 
 
@@ -412,3 +522,25 @@ ul {
     .clearfix {
       zoom: 1; /* For IE 6/7 (trigger hasLayout) */
     }
+
+
+
+
+/* Hej Sibar!
+
+på grund utav jobb och skolansökningar har jag på slutet halkat efter lite. Detta "duger" förhoppningsvis för kursen,
+men jag har lämnat en del oklart och kommentarer där jag inte fått till funktionerna - som lightbox, något som jag 
+gärna fixar efter denna inlämning.
+Samt så är det två album som än är tomma, detta hoppas jag också är ok för dig. Då det bara är klippa och klistra och hitta bilder
+som sinkar mig här. Dessutom har jag tänkt att lägga till fler album under sidan "portfolio" men detta är ju samma teknik som innan
+bara tidskrävande.
+Sist men inte minst så skulle koden behöva städas lite. och jag skulle vilja ha flera variablar, så att de är lättare att nå, vid ändringsbehov.
+
+Tack för denna kursen! Det har varit toppen! Förutom möjligtvis att ljudet fortsatt försvunnit för mig i videorna.
+Men det kanske bara är min dator? :)
+
+Allt gott, Alexandra
+
+p.s
+Jag ser att jag har en "uncaught TypeError på clinetWidth men inte hittat någon lösning för detta. Jag vet heller inte om den stör egentligen?
+Karusellen fungerar iaf för mig. d.s */

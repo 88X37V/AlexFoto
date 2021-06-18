@@ -1,3 +1,5 @@
+//Carousel
+
 const carouselSlide = document.querySelector('.carousel_images');
 const carouselImages = document.querySelectorAll('.carousel_images img');
 
@@ -46,3 +48,25 @@ carouselSlide.addEventListener('transitionend', () => {
     }
     
 })
+
+// lightbox, fungerar icke (och hinner inte fixa tills exemination men vill gärna försöka efter,
+// därav finns denna kod kvar :))
+
+// const lightbox = document.getElementsByClassName('.lightbox');
+
+// const images = document.querySelectorAll('.gallery_img')
+// images.forEach(image => {
+//     image.addEventListener('click', e => {
+//         lightbox.classList.add('active')
+//         const img = document.createElement('gallery_img')
+//         gallery_img.src = gallery_img.src
+//         while (lightbox.firstChild) {
+//             lightbox.removeChild(lightbox.firstChild)}
+//         lightbox.appendChild(gallery_img)
+//     })
+// })
+
+// lightbox.classList.remove('click', e => {
+//     if(e.target !== e.currentTarget)return
+//     lightbox.classList.remove('active')
+// })

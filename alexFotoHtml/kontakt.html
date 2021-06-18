@@ -9,8 +9,7 @@
     <body>
 
 
-        <!-- Navigationbar -->
-        
+    <!-- Navigationbar -->
         <nav id="nav">
             <div>
             <img src="img/logga3.apng.png" width="100px" height="100px" id="logga" alt="Företags-logga">
@@ -21,11 +20,11 @@
                     <li><a href="om-mig.html">Om mig</a></li>
                     <!-- Here starts the dropout one -->
                     <li class="dropdown">
-                        <a href="#">Portfolio</a>
+                        <a href="Portfolio.html">Portfolio</a>
                         <ul class="dropdown-content">
                             <li><a href="Portrait.html">Porträtt</a></li>
                             <li><a href="#">Student</a></li>
-                            <li><a href="#">Resor</a></li>
+                            <li><a href="Travel.html">Resor</a></li>
                             <li><a href="#">Musik</a></li>
                         </ul>
                         <li><a href="kontakt.html" class="active">Kontakt</a></li>
@@ -34,10 +33,43 @@
             </div>
         </nav>
 
-        <div class="content">
-    
+    <!-- Contact -->
+        <div class="form_content">
+
+            <div class="form_container">
+                <div class="title">Email me here:</div>
+                <form action="#">
+                    <div class="user_details">
+
+                        <div class="input_box">
+                            <span class="details">Namn</span>
+                            <input type="text" placeholder="Namn" required>
+                        </div> 
+
+                        <div class="input_box">
+                            <span class="details">Mail</span>
+                            <input type="text" placeholder="Mail" required>
+                        </div> 
+
+                        <div class="input_box">
+                            <span class="details">Telefon</span>
+                            <input type="text" placeholder="Telefon nr" required>
+                        </div> 
+
+                        <div class="input_box">
+                            <span class="details">Message</span>
+                            <textarea name="message" id="massage" cols="35" rows="10"></textarea>
+                        </div>
+                    </div>
+                <div class="button">
+                    <input type="submit" value="Skicka">
+                </div>
+            </form>
         </div>
+        </div>
+
         
+    <!-- Footer -->
         <footer class="footer">
             <div class="container">
                <div class="row">
@@ -47,7 +79,6 @@
                         <li><h3>&copy; Alexfoto</h3></li>
                     </ul>
                         </div>
-        
                    <div class="foot-col">
                         <div class="footer-text">
                     <ul>
@@ -85,7 +116,7 @@
          så att en kan överskriva vid behov) -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="Js/main.js"></script>
+    <script src="Js/app.js"></script>
 </body>
 </html>
 
